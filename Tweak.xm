@@ -6,11 +6,13 @@ return NULL;
  %orig(NULL);
 }
 %end
+
 %hook SBFWallpaperSettings
 -(bool) replaceBlurs{
   return 1;
 }
 %end
+
 %hook SBIconColorSettings
 -(double) colorAlpha {
 return 0;
@@ -22,6 +24,7 @@ return 0;
 return 0;
 }
 %end
+
 %hook SBFolder
 -(id) displayName {
 return NULL;
