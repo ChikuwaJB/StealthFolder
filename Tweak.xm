@@ -3,14 +3,15 @@
 return NULL;
 }
 -(void) setGridImage:(id)arg1 {
-arg1 = NULL;
+ %orig(NULL);
 }
 %end
 %hook SBFWallpaperSettings
--(bool) replaceBlurs{return 1;}
+-(bool) replaceBlurs{
+  return 1;
+}
 %end
 %hook SBIconColorSettings
-
 -(double) colorAlpha {
 return 0;
 }
@@ -20,7 +21,6 @@ return 0;
 -(double) blurryFolderIcons {
 return 0;
 }
-
 %end
 %hook SBFolder
 -(id) displayName {
